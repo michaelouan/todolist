@@ -60,17 +60,8 @@ function addOne(task,x,dateToDo) {
         dataType: "json",
       });
 
-      window.location.replace("http://192.168.1.16:3000");
+      window.location.replace("http://localhost:3000");
 }
-
-function checkDate() {
-
-    var startDate = new Date(document.getElementById('biday').value);
-    var today = new Date();
-    if (startDate.getTime() > today.getTime()) {
-      alert("The first date is after the second date!");
-    }
-}  
 
 function addZero(i) {
     if (i < 10) {
