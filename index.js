@@ -41,27 +41,6 @@ app.get("/list", function(request, response)  {
 
 
  app.post("/add", function(req, res) {
-      
-    //     var d = new Date();
-    //     var h = addZero(d.getHours());
-    //     var m = addZero(d.getMinutes());
-    //     var s = addZero(d.getSeconds());
-    //     var month = d.getMonth();
-    //     var year = d.getFullYear();
-    //     var day = d.getDay();
-    //     var x = day +"/" + month +"/" + year +"  " + h + ":" + m + ":" + s;
-
-    //     function addZero(i) {
-    //         if (i < 10) {
-    //           i = "0" + i;
-    //         }
-    //         return i;
-    //       }
-
-    //  var title , description;
-    //  title = req.body.title;
-    //  description = req.body.description;
-    //  var myData = { title : title , description: description , currentDate : x , dateToDo : req.body.dateToDo , locationToDo : { name :req.body.location.name , x:req.body.location.lon , y : req.body.location.lat },isComplete : false};
      dbo.collection("name").insertOne(req.body);
      console.log(myData);
 });
