@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript" src="./jsquery.js"></script>
+  <link rel="stylesheet" type="text/css" href="./main.css">
+</head>
+  <body>
+      <div>
+        <label>Username:</label>
+        <input type="text" name="username" id="username" />
+        <br>
+      </div><br>
+      <div>
+        <label>Password:</label>
+        <input type="password" id="password" />
+        <br>
+      </div><br>
+      <br>
+      <div>
+        <input type="submit" onclick="addUser()" value="Submit" />
+      </div>
+      <p id="success"></p>
+  </body>
+  <script>
+function addUser() {
+    let password = $("#password").val();
+    let username = $('#username').val(); 
+    
+    $.ajax({
+        url: "http://localhost:3000/register",
+        type: "POST",
+        data : {"username" : username ,"password" : password },
+        success: function(data) {
+            if(!data) {
+                alert("You succefuly registred! Please connect");
+                window.location.replace("http://localhost:3000")
+            } else {
+                $("#success").html("This username already exist! Choose an another username");
+                $("#username").val("");
+                $("#password").val("");
+            }
+        }, 
+        error: function(){
+            alert('failure');
+        },
+    });
+    
+}
+ 
+  </script>
+</html>

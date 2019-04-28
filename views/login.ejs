@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript" src="./jsquery.js"></script>
+  <link rel="stylesheet" type="text/css" href="./main.css">
+</head>
+<form action="/" method="post">
+    <div>
+      <label>Username:</label>
+      <input type="text" name="username" id="username" />
+    </div><br>
+    <div>
+      <label>Password:</label>
+      <input type="password" name="password" id="pwd"/>
+    </div><br>
+    <div>
+      <input type="submit" value="Submit" id="submit" /><br><br>
+      <input type="sign in" onclick="redirect()" value="sign in" id="register" />
+    </div>
+  </form>
+  <p id="incorrect"></p>
+</body>
+<script>
+function redirect() {
+    location.replace("http://localhost:3000/register")
+}
+
+</script>
+</html>
