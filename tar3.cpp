@@ -1,29 +1,32 @@
-//#include<iostream>
-//using namespace std;
-//
-//void main()
-//{
-//	int arr[30];
-//	int number = 0;
-//	int count = 0;
-//
-//	for (int i = 0; i < 30; i++)
-//	{
-//		cin >> arr[i];
-//	}
-//
-//	while (number < 10)
-//	{
-//		for (int i = 0; i < 30; i++)
-//		{
-//			if (arr[i] == number)
-//			{
-//				count++;
-//			}
-//		}
-//
-//		cout << "The number " << number << " appear " << count << " times" << endl;
-//		number++;
-//		count = 0;
-//	}
-//}
+#include<iostream>
+using namespace std;
+
+void main()
+{
+	int arr[10];
+	int number = 0;
+	int count = 0;
+
+	for (int i = 0; i < 10; i++)
+	{
+		cin >> arr[i];
+	}
+
+	
+	for (int i = 0; i < 10; i++)
+	{
+		while (arr[i] == number)
+		{
+			i++;
+			count++;
+		}
+		if (count != 0)
+		{
+			cout << "The number " << number << " appear " << count << " times" << endl;
+			count = 0;
+		}
+		
+		number++;
+		i--;
+	}
+}
