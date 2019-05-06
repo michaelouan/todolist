@@ -12,8 +12,8 @@ void main()
 		cin >> arr[i];
 	}
 
-	
-	for (int i = 0; i < 10; i++)
+	int i = 0;
+	while (i < 10)
 	{
 		while (arr[i] == number)
 		{
@@ -25,8 +25,6 @@ void main()
 			cout << "The number " << number << " appear " << count << " times" << endl;
 			count = 0;
 		}
-		
 		number++;
-		i--;
 	}
 }
