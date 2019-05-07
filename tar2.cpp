@@ -34,8 +34,10 @@ int binarySearch(int arr[], int l, int r, int numToSearch)
 	{
 		return binarySearch(arr, l, middle - 1, numToSearch);
 	}
-
-	return binarySearch(arr, middle + 1, r, numToSearch);
+	else
+	{
+		return binarySearch(arr, middle + 1, r, numToSearch);
+	}
 }
 
 int countOccurrences(int arr[], int ArrayLength, int numToSearch)
