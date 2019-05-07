@@ -50,13 +50,13 @@ int countOccurrences(int arr[], int ArrayLength, int numToSearch)
 		return 0;
 	}
 		
-	while (left >= 0 && arr[left] == numToSearch)
+	while (arr[left] == numToSearch)
 	{
 		count++;
 		left--;
 	}
 
-	while (right < ArrayLength && arr[right] == numToSearch)
+	while (arr[right] == numToSearch)
 	{
 		count++;
 		right++;
